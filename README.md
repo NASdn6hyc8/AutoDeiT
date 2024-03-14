@@ -38,15 +38,19 @@ Here is a example of directory structure:
     class_1/
       img_1.jpeg
       img_2.jpeg
+      ...
     class_2/
       img_3.jpeg
+      ...
     ...
   val/
     class_1/
       img_4.jpeg
       img_5.jpeg
+      ...
     class_2/
       img_6.jpeg
+      ...
     ...
 ```
 
