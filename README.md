@@ -56,3 +56,6 @@ Then you can test our SubDeiT with following command:
 ```bulidoutcfg
 python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval --teacher_model ''
 
+## Acknowledgements
+
+The codes are inspired by [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer),[HAT](https://github.com/mit-han-lab/hardware-aware-transformers), [DeiT](https://github.com/facebookresearch/deit), [SPOS](https://github.com/megvii-model/SinglePathOneShot).
