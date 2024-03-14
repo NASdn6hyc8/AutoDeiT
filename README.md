@@ -27,7 +27,7 @@ You need to download the [Imagenet-1k](http://www.image-net.org/) and move image
 Here is a example of directory structure:
 
 ```
-/path/to/imagenet/
+/PATH/TO/IMAGENET/
   train/
     class_1/
       img_1.jpeg
@@ -44,5 +44,9 @@ Here is a example of directory structure:
 
 ### Test
 
-Test our SubDeiT with following command:
+To test our SubDeiT, you need to move the downloaded model to `/PATH/TO/CHECKPOINT`.
+
+Then you can test our SubDeiT with following command:
+```bulidoutcfg
+python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval --teacher_model ''
 
