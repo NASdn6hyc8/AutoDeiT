@@ -17,3 +17,12 @@ Our search result is available in `$`, which contains the information of the fin
 ### SubDeiT
 
 Our finetuned SubDeiT weight is available in `$`.
+
+## Usage
+
+### Data Preparation
+
+### Test
+
+Test our SubDeiT with following command:
+
