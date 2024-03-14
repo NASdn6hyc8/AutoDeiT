@@ -8,15 +8,15 @@ AutoDeiT is a method for searching the optimal DeiT architecture and its corresp
 
 ### SuperDeiT
 
-Our trained SuperDeiT weight is available in `$`, which can be used for searching and finetuning.
+Our trained SuperDeiT weight is available in [GitHub](https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/superDeiT.pth), which can be used for searching and finetuning.
 
 ### Search Result
 
-Our search result is available in `$`, which contains the information of the final generation population from evolutionary search.
+Our search result is available in [GitHub](https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/checkpoint-20.pth.tar), which contains the information of the final generation population from evolutionary search.
 
 ### SubDeiT
 
-Our finetuned SubDeiT weight is available in `$`.
+Our finetuned SubDeiT weight is available in [GitHub](https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/subDeiT.pth).
 
 ## Usage
 
