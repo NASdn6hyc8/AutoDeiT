@@ -4,6 +4,8 @@
 
 AutoDeiT is a method for searching the optimal DeiT architecture and its corresponding optimal knowledge distillation teacher model under parameter constraints.
 
+We provide code for testing our SubDeiT, and the full code will be released in the future.
+
 <div align="center">
     <img width="100%" alt="AutoDeiT" src="https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/SuperDeiT.png">
 </div>
@@ -48,7 +50,7 @@ Here is a example of directory structure:
 
 ### Test
 
-To test our SubDeiT, you need to move the downloaded model to `/PATH/TO/CHECKPOINT`.
+To test our SubDeiT, you need to move the downloaded SubDeiT model to `/PATH/TO/CHECKPOINT`.
 
 Then you can test our SubDeiT with following command:
 ```bulidoutcfg
