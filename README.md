@@ -4,6 +4,10 @@
 
 AutoDeiT is a method for searching the optimal DeiT architecture and its corresponding optimal knowledge distillation teacher model under parameter constraints.
 
+<div align="center">
+    <img width="50%" alt="AutoDeiT" src="https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/SuperDeiT.pdf">
+</div>
+
 ## Our Trained Model/Checkpoint
 
 ### SuperDeiT
