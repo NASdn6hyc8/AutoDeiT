@@ -4,7 +4,6 @@
 
 AutoDeiT is a method for searching the optimal DeiT architecture and its corresponding optimal knowledge distillation teacher model under parameter constraints.
 
-We provide code for testing our SubDeiT, and the full code will be released in the future.
 
 <div align="center">
     <img width="100%" alt="AutoDeiT" src="https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/SuperDeiT.png">
