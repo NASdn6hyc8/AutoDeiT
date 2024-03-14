@@ -22,6 +22,26 @@ Our finetuned SubDeiT weight is available in [GitHub](https://github.com/NASdn6h
 
 ### Data Preparation
 
+You need to download the [Imagenet-1k](http://www.image-net.org/) and move images to labeled subfolders.
+
+Here is a example of directory structure:
+
+```
+/path/to/imagenet/
+  train/
+    class_1/
+      img_1.jpeg
+    class_2/
+      img_2.jpeg
+    ...
+  val/
+    class_1/
+      img_3.jpeg
+    class_2/
+      img_4.jpeg
+    ...
+```
+
 ### Test
 
 Test our SubDeiT with following command:
