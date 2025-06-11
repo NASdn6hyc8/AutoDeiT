@@ -4,11 +4,6 @@
 
 AutoDeiT is a method for searching the optimal DeiT architecture and its corresponding optimal knowledge distillation teacher model under parameter constraints.
 
-
-<div align="center">
-    <img width="100%" alt="AutoDeiT" src="https://github.com/NASdn6hyc8/AutoDeiT/releases/download/model/SuperDeiT.png">
-</div>
-
 ## Our Trained Model/Checkpoint
 
 ### SuperDeiT
@@ -52,6 +47,14 @@ Here is a example of directory structure:
       ...
     ...
 ```
+### Supernet Training
+You can train/fine-tune a supernet with following command:
+
+```bulidoutcfg
+
+python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval
+
+```
 
 ### Test
 
@@ -59,7 +62,9 @@ To test our SubDeiT, you need to move the downloaded SubDeiT model to `/PATH/TO/
 
 Then you can test our SubDeiT with following command:
 ```bulidoutcfg
-python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval --teacher_model ''
+
+python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval
+
 ```
 
 ## Acknowledgements
