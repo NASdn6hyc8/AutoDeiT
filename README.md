@@ -52,7 +52,22 @@ You can train/fine-tune a supernet with following command:
 
 ```bulidoutcfg
 
-python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --mode retrain --relative_position --dist-eval --cfg ./experiments/subnet/AutoDeiT-T.yaml --resume /PATH/TO/CHECKPOINT --eval
+python -m torch.distributed.launch --nproc_per_node=4 --use_env supernet_train.py --data-path /PATH/TO/IMAGENET/ --teacher_model YOUR/TEACHER/MODEL/NAME --teacher_model_1 YOUR/TEACHER/MODEL/NAME --teacher_model_2 YOUR/TEACHER/MODEL/NAME --gp --change_qkv --mode super --relative_position --dist-eval --cfg ./experiments/supernet/supernet-T.yaml --epochs 500 --warmup-epochs 20 --output /PATH/TO/SAVE/
+
+```
+
+### Evolutionary Search
+To generate the subImagenet in /PATH/TO/IMAGENET, you could simply run:
+```bulidoutcfg
+
+python ./lib/subImageNet.py --data-path /PATH/TO/IMAGENET/
+
+```
+
+You can search a DeiT architecture with following command:
+```bulidoutcfg
+
+python -m torch.distributed.launch --nproc_per_node=4 --use_env evolution.py --data-path /PATH/TO/IMAGENET/ --gp --change_qkv --relative_position --dist-eval --cfg ./experiments/supernet/supernet-T.yaml --resume /SUPERNET/CHECKPOINT --min-param-limits YOUR/CONFIG --param-limits YOUR/CONFIG --data-set EVO_IMNET --output_dir /PATH/TO/SAVE/
 
 ```
 
